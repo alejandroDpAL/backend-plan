@@ -32,7 +32,14 @@ servidor.use('/productiva', rutaProductiva)
 servidor.use('/empresas', rutaEmpresas)
 servidor.use('/ambientes', rutaAmbientes)
 
+servidor.set('view engine', 'ejs')
+servidor.set('views', './views')
+
 servidor.use(express.static('./public'))
+
+servidor.get('/document', (req, res) => {
+    res.render('document.ejs')
+})
 
 servidor.listen(3000, () => {
     console.log('Servidor funcionando en el puerto 3000');

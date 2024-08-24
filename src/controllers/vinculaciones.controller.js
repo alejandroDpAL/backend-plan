@@ -86,11 +86,11 @@ export const inactivarVinculacion = async(req, res) => {
 
         if(rows.affectedRows>0){
             res.status(200).json({
-                message: 'Vinculación inactivada correctamente'
+                message: 'Vinculación desactivada correctamente'
             })
         }else{
             res.status(403).json({
-                message: 'Error al inactivar la vinculación'
+                message: 'Error al desactivar la vinculación'
             })
         }
     } catch (error) {

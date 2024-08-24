@@ -14,7 +14,7 @@ export const validar = async (req, res) => {
       console.log(user);
       
       const validPassword = await bcrypt.compare(password, user.password);
-      if (!validPassword) {
+      if (validPassword) {
         return res.status(404).json({ message: "Contraseña incorrecta", validPassword});
       }
       const token = jwt.sign({ rows }, process.env.AUT_SECRET, {

@@ -1,0 +1,21 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+table, tr, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+}
+table{
+    width: 800px;
+}
+
+hr{
+    border: 1px solid black;
+    width: 100%;
+}
+
